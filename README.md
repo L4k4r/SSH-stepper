@@ -23,7 +23,7 @@ Now when executing the newly build SSH binary, the command(s) specified in the `
 Instead of building the SSH binary with modified code, it is possible to inject a malicious shared object into the program and execute commands that way on the SSHD server. To do this, get the `ssh-stepper.c` file from the sharedobject folder, and compile it with:
 
 ```
-gcc -fPIC -shared -o inject_write.so inject_write.c packet.o sshbuf.o sshbuf-getput-basic.o cipher.o *chacha*.o poly1305.o -ldl -pthread
+gcc -fPIC -shared -o ssh-stepper.so ssh-stepper.c packet.o sshbuf.o sshbuf-getput-basic.o cipher.o *chacha*.o poly1305.o -ldl -pthread
 ```
 
 Ensure to clone and build the original OpenSSH-Portable code, as the object files from that code are needed to compile the shared object.
