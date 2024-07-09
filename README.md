@@ -1,5 +1,5 @@
 # SSH-stepper
-The code in this repository enables lateral movement through SSH connections. It injects keystrokes into a new SSH session, thus infecting an SSHD server to which the connection is being made.
+The code in this repository enables lateral movement through SSH connections by injecting keystrokes into a new SSH session, thus infecting an SSHD server to which the connection is being made. This tool is designed for red teaming operations where systems use short-lived or one-time passwords to connect via SSH. With this tool, it is still possible to achieve lateral movement through these secured connections.
 
 
 # Backdoor
